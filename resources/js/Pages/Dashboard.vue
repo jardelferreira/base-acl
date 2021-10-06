@@ -4,6 +4,7 @@
       <h2 class="h4 font-weight-bold">
         Dashboard
       </h2>
+      
     </template>
   </app-layout>
 </template>
@@ -17,6 +18,6 @@ export default defineComponent({
   components: {
     AppLayout,
     Welcome
-  }
+  },
 });
 </script>

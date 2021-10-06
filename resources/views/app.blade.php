@@ -20,6 +20,17 @@
         <script src="{{ mix('js/dashboard.js') }}" defer></script>
     </head>
     <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed bg-light font-sans antialiased">
+        <script>
+            var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                    // Typical action to be performed when the document is ready:
+                    window.menu =  (xhttp.responseText);
+                    }
+                };
+                xhttp.open("GET", "http://www.sglt.test/menu", true);
+                xhttp.send();
+        </script>
         @inertia
 
         @env ('local')
